@@ -10,11 +10,13 @@ pipeline:
     image: robertstettner/drone-cloudformation
     stackname: my-awesome-stack
     template: templates/stack.yml
+    access_key:
+      from_secret: access_key
+    secret_key:
+      from_secret: access_key
     params:
       Version: 123
       Environment: staging
-      access_key: 'Missing credentials in config'
-      secret_key: 'Missing credentials in config'
 #    when:
 #      event: deployment
 

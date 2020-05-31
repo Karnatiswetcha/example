@@ -13,7 +13,7 @@ pipeline:
     access_key:
       from_secret: access_key
     secret_key:
-      from_secret: access_key
+      from_secret: secret_key
     params:
       Version: 123
       Environment: staging

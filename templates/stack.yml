@@ -2,4 +2,4 @@ Resources:
   NewResource:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: Swetchastest-s3bucket2
+      BucketName: swetchastest-s3bucket2

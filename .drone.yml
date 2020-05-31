@@ -1,3 +1,10 @@
+kind: pipeline
+name: default
+
+workspace:
+  base: /go
+  path: src/github.com/Karnatiswetcha/example
+
 pipeline:
   deploy:
     image: robertstettner/drone-cloudformation
@@ -6,5 +13,31 @@ pipeline:
     params:
       Version: 123
       Environment: staging
-    when:
-      event: deployment
+#    when:
+#      event: deployment
+
+steps:
+  - name: test
+    image: node
+    commands:
+      - npm install
+#      - npm test
+
+  - name: build
+    image: node
+    commands:
+      - npm build
+
+#  - name: run
+#    image: golang
+#    commands:
+#      - go get
+#      - go build -o output
+#      - chmod +x output
+#      - ./output
+
+
+#volumes:
+#  - name: reports
+#    host:
+#      path: /home/dev/work/src/github.com/cyantarek/drone-go-git-test/reports

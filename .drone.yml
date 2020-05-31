@@ -9,7 +9,7 @@ pipeline:
   deploy:
     image: robertstettner/drone-cloudformation
     stackname: my-awesome-stack
-    template: templates/stack.yml
+    template: templates/stacklambda.yml
     access_key:
       from_secret: access_key
     secret_key:

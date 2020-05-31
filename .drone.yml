@@ -15,9 +15,7 @@ pipeline:
     secret_key:
       from_secret: secret_key
     region: us-east-1
-    params:
-      Version: 123
-      Environment: staging
+
 #    when:
 #      event: deployment
 

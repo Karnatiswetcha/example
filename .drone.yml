@@ -17,6 +17,16 @@ steps:
     commands:
       - npm build
 
+  - name: deploy
+    image: robertstettner/drone-cloudformation
+    stackname: my-awesome-stack
+    template: templates/stack.yml
+    params:
+      Version: 123
+      Environment: staging
+#    when:
+#      event: deployment
+
 #  - name: run
 #    image: golang
 #    commands:

@@ -13,6 +13,10 @@ pipeline:
     params:
       Version: 123
       Environment: staging
+      access_key:
+        from_secret: access_key
+      secret_key:
+        from_secret: access_key
 #    when:
 #      event: deployment
 

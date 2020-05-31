@@ -1,6 +1,5 @@
 Resources:
-  S3Bucket:
+  NewResource:
     Type: AWS::S3::Bucket
-    DeletionPolicy: Retain
     Properties:
-      BucketName: my-bucket
+      BucketName: test-s3bucket2

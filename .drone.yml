@@ -13,10 +13,8 @@ pipeline:
     params:
       Version: 123
       Environment: staging
-      access_key:
-        from_secret: access_key
-      secret_key:
-        from_secret: secret_key
+      access_key: 'Missing credentials in config'
+      secret_key: 'Missing credentials in config'
 #    when:
 #      event: deployment
 
@@ -43,5 +41,6 @@ steps:
 
 #volumes:
 #  - name: reports
-#    host:
+#type: digitalocean
+#token:#    host:
 #      path: /home/dev/work/src/github.com/cyantarek/drone-go-git-test/reports
